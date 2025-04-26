@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+    />
+    <title>VLPS Premium: ChowApp - View Transaction</title>
+
+    <link rel="stylesheet" href="../../dome.base/ui/app.css" />
+    <link rel="stylesheet" href="../../dome.base/lib/tailwind.css" />
+  </head>
+  <body>
+    <main class="h-screen _font bg-theme">
+      <!-- Transaction Details (Component), shows tx info, dynamically add data -->
+      <section class="flex items-center h-full justify-center">
+        <div class="tx-box p-4 bg-white w-full ml-5 mr-5 mb-40">
+          <h1 class="text-lg font-medium text-center mb-3 pt-1">
+            Transaction Details
+            <span class="stale-tx font-semibold">(Used)</span>
+          </h1>
+          <hr
+            class="tx-box-line"
+            style="outline-width: 0.1px; background-color: rgb(72, 72, 72)"
+          />
+
+          <div class="pt-6">
+            <h6 class="font-semibold text-sm" id="transaction-id">
+              Transaction ID
+            </h6>
+            <p id="used-txid" class="font-medium text-sm pt-0.5">
+              #000000000000000000000000
+            </p>
+
+            <h6 class="font-semibold text-sm pt-4" id="transaction-date">
+              Transaction Date
+            </h6>
+            <p id="used-date" class="font-medium text-sm pt-0.5">
+              XXX XXX XX XXXX at 00:00:00
+            </p>
+
+            <h6 class="font-semibold text-sm pt-4" id="transaction-status">
+              Transaction Status
+            </h6>
+            <p id="used-status" class="font-medium text-sm pt-0.5">Success</p>
+
+            <h6 class="font-semibold text-sm pt-4" id="to">To</h6>
+            <p id="used-cafe" class="font-medium text-base pt-0.5">
+              Restaurant
+            </p>
+
+            <div class="pt-4">
+              <h6 class="font-semibold text-sm pt-0.5" id="amount">Amount</h6>
+              <p class="tx-cost font-bold text-xl hyper-text">
+                &#8358;<span id="used-cost">0</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Button Group (Component Collection), function, go back & save transaction as image -->
+      <section class="fixed bottom-8 w-full">
+        <div class="pl-5 pr-5 pb-5">
+          <button
+            onclick="javascript:history.back()"
+            id="vbtn"
+            class="btn-0 hyper-text bg-white text-lg font-medium rounded-full h-14 w-full p-4"
+          >
+            Done
+          </button>
+        </div>
+
+        <div class="pl-5 pr-5">
+          <button
+            id="vbtn"
+            class="btn-0 hyper-text bg-white text-lg font-medium rounded-full h-14 w-full p-4"
+          >
+            Save to Phone
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <script src="../../dome.scripts/dome-tx-list.js"></script>
+  </body>
+</html>

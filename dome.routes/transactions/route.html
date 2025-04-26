@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+    />
+    <title>VLPS Premium: ChowApp - Transactions (Fragment)</title>
+
+    <link rel="stylesheet" href="../../dome.base/ui/app.css" />
+    <!-- <link rel="stylesheet" href="../../dbs_modules/sass/refresh.css"> -->
+    <link rel="stylesheet" href="../../dome.base/lib/tailwind.css" />
+  </head>
+  <body>
+    <!-- Suspense Mode (State), loader, static function -->
+    <section
+      id="suspenseContainer"
+      class="h-screen flex justify-center items-center hidden"
+      id=""
+    >
+      <div class="loader flex space-x-2">
+        <div class="dot h-4 w-4 rounded-full"></div>
+        <div class="dot h-4 w-4 rounded-full"></div>
+        <div class="dot h-4 w-4 rounded-full"></div>
+      </div>
+    </section>
+
+    <main id="deliveryContainer" class="h-screen">
+      <section id="txCardContainer">
+        <!-- Dynamically add transactions -->
+      </section>
+
+      <div></div>
+
+      <section id="load_tx" class="pl-7 pr-7 pb-16 pt-2.5 hidden">
+        <button
+          class="main-btn _font rounded-full h-14 w-full hover:opacity-70"
+        >
+          Load More
+        </button>
+      </section>
+    </main>
+
+    <script src="../../dome.scripts/dome-tx.js"></script>
+  </body>
+</html>

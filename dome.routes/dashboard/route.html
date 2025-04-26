@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+    />
+    <title>VLPS Premium: ChowApp - Dashboard (Fragment)</title>
+    <link rel="stylesheet" href="../../dome.base/ui/app.css" />
+    <link rel="stylesheet" href="../../dome.base/lib/tailwind.css" />
+    <base target="_parent" />
+  </head>
+  <body>
+    <div class="h-screen">
+      <main class="pl-4 pr-4 pb-20">
+        <div class="bal-card p-4 rounded-md h-36">
+          <div class="flex justify-center items-center pt-4">
+            <h5 class="_font text-white text-medium">Feeding Balance</h5>
+          </div>
+
+          <!-- Feeding Balance (Data), stateful, reduces each transaction -->
+          <h3
+            class="_feedfont cash text-white text-4xl font-semibold text-center pt-2"
+          >
+            &#8358;<span id="chow-bal">0</span>
+          </h3>
+        </div>
+
+        <section class="pt-4 pb-4">
+          <div class="_font text-lg">
+            <h5>Available Restaurants</h5>
+          </div>
+        </section>
+
+        <section
+          class="grid grid-cols-2 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 _font"
+        >
+          <!-- Your Choice Kitchen -->
+          <div
+            id="cafe-yck"
+            role="button"
+            class="btn-0 bg-gray-100 p-4 rounded-md"
+          >
+            <div class="flex justify-center items-center pt-3 pb-2 h-20">
+              <img
+                class="rounded-full h-12"
+                src="../../dome.sources/cafe.svg"
+                alt="cafe"
+              />
+            </div>
+            <p class="text-sm text-center pb-5">Your Choice Kitchen</p>
+          </div>
+
+          <!-- Tasty Vine Kitchen -->
+          <div
+            id="cafe-tvc"
+            role="button"
+            class="btn-0 bg-gray-100 p-4 rounded-md"
+          >
+            <div class="flex justify-center items-center pt-3 pb-2 h-20">
+              <img
+                class="rounded-full h-12"
+                src="../../dome.sources/cafe.svg"
+                alt="cafe"
+              />
+            </div>
+            <p class="text-sm text-center pb-5">Tasty Vine Kitchen</p>
+          </div>
+
+          <!-- Cresta -->
+          <div
+            id="cafe-crf"
+            role="button"
+            class="btn-0 bg-gray-100 p-4 rounded-md"
+          >
+            <div class="flex justify-center items-center pt-3 pb-2 h-20">
+              <img
+                class="rounded-full h-12"
+                src="../../dome.sources/cafe.svg"
+                alt="cafe"
+              />
+            </div>
+            <p class="text-sm text-center pb-5">Cresta</p>
+          </div>
+
+          <!-- Marigold Kitchen -->
+          <div
+            id="cafe-mgk"
+            role="button"
+            class="btn-0 bg-gray-100 p-4 rounded-md"
+          >
+            <div class="flex justify-center items-center pt-3 pb-2 h-20">
+              <img
+                class="rounded-full h-12"
+                src="../../dome.sources/cafe.svg"
+                alt="cafe"
+              />
+            </div>
+            <p class="text-sm text-center pb-5">Marigold Kitchen</p>
+          </div>
+
+          <!-- Tasty Delight -->
+          <div
+            id="cafe-td"
+            role="button"
+            class="btn-0 bg-gray-100 p-4 rounded-md"
+          >
+            <div class="flex justify-center items-center pt-3 pb-2 h-20">
+              <img
+                class="rounded-full h-12"
+                src="../../dome.sources/cafe.svg"
+                alt="cafe"
+              />
+            </div>
+            <p class="text-sm text-center pb-5">Tasty Delight</p>
+          </div>
+
+          <!-- Burger & Bread -->
+          <div
+            id="cafe-bb"
+            role="button"
+            class="btn-0 bg-gray-100 p-4 rounded-md"
+          >
+            <div class="flex justify-center items-center pt-3 pb-2 h-20">
+              <img
+                class="rounded-full h-12"
+                src="../../dome.sources/cafe.svg"
+                alt="cafe"
+              />
+            </div>
+            <p class="text-sm text-center pb-5">Burger & Bread</p>
+          </div>
+
+          <!-- Eat and Play Palace -->
+          <div
+            id="cafe-epp"
+            role="button"
+            class="btn-0 bg-gray-100 p-4 rounded-md"
+          >
+            <div class="flex justify-center items-center pt-3 pb-2 h-20">
+              <img
+                class="rounded-full h-12"
+                src="../../dome.sources/cafe.svg"
+                alt="cafe"
+              />
+            </div>
+            <p class="text-sm text-center pb-5">Eat and Play Palace</p>
+          </div>
+
+          <!-- Citrus Foods -->
+          <div
+            id="cafe-cif"
+            role="button"
+            class="btn-0 bg-gray-100 p-4 rounded-md"
+          >
+            <div class="flex justify-center items-center pt-3 pb-2 h-20">
+              <img
+                class="rounded-full h-12"
+                src="../../dome.sources/cafe.svg"
+                alt="cafe"
+              />
+            </div>
+            <p class="text-sm text-center pb-5">Citrus Foods</p>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="../../dome.scripts/dome-cafes.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mobile-detect/1.4.5/mobile-detect.min.js"></script>
+  </body>
+</html>

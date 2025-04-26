@@ -1,0 +1,22 @@
+{
+  "bkay": {
+    "authInfo": {
+      "uuid": "",
+      "priority": "chow-usr-01",
+      "username": "bkay",
+      "secureKey": "YXV0aD0weCxia2F5LG1lZGlh"
+    },
+    "accVariables": {
+      "chowBalance": 0,
+      "pin": 1234
+    },
+    "accInfo": {
+      "firstName": "Kolade",
+      "middleName": "David",
+      "lastName": "Ogunleye",
+      "matricNo": "LCU/UG/22/19223",
+      "emailAddr": "beekay@gmail.com",
+      "nxtFunding": ""
+    }
+  }
+}

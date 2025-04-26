@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+    />
+    <title>VLPS Premium: ChowApp - Transcations</title>
+
+    <link rel="stylesheet" href="../dome.base/ui/app.css" />
+    <link rel="stylesheet" href="../dome.base/lib/tailwind.css" />
+  </head>
+  <body>
+    <main class="h-screen">
+      <section class="sticky top-0 bg-white h-24 z-20">
+        <div class="">
+          <h1 class="_font text-center text-xl font-medium pt-14">
+            Transactions
+          </h1>
+        </div>
+      </section>
+
+      <section class="framer">
+        <iframe src="./transactions/route.html" class="w-screen z-0"></iframe>
+      </section>
+    </main>
+
+    <!-- BottomNavigationBar (Component), navigator, static function -->
+    <section class="fixed bottom-0 w-full">
+      <nav class="border-t bg-white h-20 w-full">
+        <ul class="flex justify-around pt-2">
+          <li class="pt-1 pl-0.5">
+            <a href="./dashboard.html">
+              <img class="h-6" src="../dome.sources/dashboard.svg" />
+            </a>
+          </li>
+
+          <li class="pt-1 pl-1.5">
+            <a href="./transactions.html">
+              <img class="inbox-icon" src="../dome.sources/inbox-active.svg" />
+            </a>
+          </li>
+
+          <li class="pt-0.5 pl-0.5">
+            <a href="./profile.html">
+              <img class="profile-icon" src="../dome.sources/profile.svg" />
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </section>
+  </body>
+</html>

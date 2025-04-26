@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+    />
+    <title>VLPS Premium: ChowApp - Login</title>
+
+    <link rel="stylesheet" href="dome.base/ui/app.css" />
+    <link rel="stylesheet" href="dome.base/ui/modal.css" />
+    <link rel="stylesheet" href="dome.base/lib/tailwind.css" />
+  </head>
+  <body>
+    <!-- Suspense (View), timer 3s, hide this section -->
+    <section
+      class="h-screen bg-splash flex justify-center items-center"
+      id="splash-screen"
+    >
+      <div class="splash-center pb-16">
+        <div id="app-logo " class="flex justify-center">
+          <img
+            class="h-48"
+            src="https://i.ibb.co/83zrtMw/logo.png"
+            alt="LCU Feeding App Logo"
+          />
+        </div>
+
+        <div class="flex justify-center">
+          <p class="spl-text-1 font-bold text-4xl tracking-wide">LCU</p>
+          <p class="spl-text-2 font-bold text-4xl tracking-wide">Feeding</p>
+        </div>
+
+        <div class="flex justify-center pt-3">
+          <p class="_font spl-text-3 text-xs">Student Companion</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Login (Route), timer 3s, show this section -->
+    <section class="h-screen hidden" id="login-form">
+      <div class="flex justify-center">
+        <div class="sticky pt-16">
+          <h2 class="_font text-center text-3xl pt-3">Login</h2>
+          <p class="_font text-center text-lg pt-1">
+            Add your details to Login
+          </p>
+        </div>
+      </div>
+
+      <form class="flex flex-col pt-5" id="">
+        <fieldset class="pl-7 pr-7 pb-2.5">
+          <input
+            id="login_usr"
+            class="_font std-input rounded-full h-14 w-full pl-4 text-lg"
+            type="text"
+            placeholder="Username"
+            required
+          />
+        </fieldset>
+
+        <fieldset class="pl-7 pr-7 pt-2.5">
+          <input
+            id="login_pwd"
+            class="_font std-input rounded-full h-14 w-full pl-4 text-lg"
+            type="password"
+            placeholder="Password"
+            required
+          />
+        </fieldset>
+
+        <div class="pl-7 pr-7 pt-4">
+          <button
+            id="login_btn"
+            class="_font btn-0 main-btn rounded-full h-14 w-full"
+          >
+            Login
+          </button>
+        </div>
+
+        <div>
+          <p class="_font text-center pt-6 hidden">
+            <a href="#">Forgot your password?</a>
+          </p>
+        </div>
+      </form>
+
+      <div class="fixed bottom-16 w-full">
+        <p class="_font text-center text-base">
+          Don't have an Account?
+          <button id="reg_btn" class="_font btn-0 hyper-text font-bold">
+            Sign Up
+          </button>
+        </p>
+      </div>
+    </section>
+
+    <!-- iOS Modal -->
+    <div
+      class="hidden fixed inset-0 flex items-center justify-center bg-black bg-opacity-50"
+      id="cupertinoModalMain"
+    >
+      <div class="pt-3.5">
+        <div id="cupertinoDialog" class="WK-iOSAlert rounded-xl">
+          <div>
+            <h1 id="cupertinoTitle" class="WK-iOSAlertTitle text-center">
+              Label
+            </h1>
+            <p id="cupertinoContent" class="WK-iOSAlertDescription text-center">
+              Description
+            </p>
+            <div class="WK-iOSAlertActionBar">
+              <button
+                id="cupertinoModalBtn"
+                class="WK-iOSAlertAction border-t rounded-b-lg"
+              >
+                Ok
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Android Modal -->
+    <div
+      class="hidden fixed inset-0 flex items-center justify-center bg-black bg-opacity-50"
+      id="materialModalMain"
+    >
+      <div class="pt-1">
+        <div id="materialDialog" class="WK-MaterialAlert rounded-xs _feedfont">
+          <div class="pt-1">
+            <!-- <img class="" src="./dbs_content/alertbox.png"> -->
+            <h1 id="materialTitle" class="WK-MaterialAlertTitle font-medium">
+              Label
+            </h1>
+            <p id="materialContent" class="WK-MaterialAlertDescription">
+              Description
+            </p>
+            <div class="WK-MaterialAlertActionBar flex flex-row-reverse">
+              <button
+                id="materialModalBtn"
+                class="WK-MaterialAlertAction font-medium mr-4 mt-8 py-1.5 px-4"
+              >
+                OK
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var md = new MobileDetect(window.navigator.userAgent);
+
+        if (md.os() === "AndroidOS") {
+          const activePlatform = md.os();
+          localStorage.setItem("appPlatform", activePlatform);
+        } else if (md.os() === "iOS") {
+          const activePlatform = md.os();
+          localStorage.setItem("appPlatform", activePlatform);
+        }
+        setTimeout(function () {
+          document.getElementById("splash-screen").classList.add("hidden");
+          document.getElementById("login-form").classList.remove("hidden");
+        }, 3000);
+      });
+    </script>
+    <script src="./dome.scripts/dome-auth.js"></script>
+    <script src="./dome.scripts/dome-demo.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mobile-detect/1.4.5/mobile-detect.min.js"></script>
+  </body>
+</html>

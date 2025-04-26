@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+    />
+    <title>VLPS Premium: ChowApp - Verify Order</title>
+
+    <link rel="stylesheet" href="../dome.base/ui/app.css" />
+    <link rel="stylesheet" href="../dome.base/ui/modal.css" />
+    <link rel="stylesheet" href="../dome.base/ui/transition.css" />
+    <link rel="stylesheet" href="../dome.base/lib/tailwind.css" />
+    <link rel="stylesheet" href="../dome.base/ui/ispinner.css" />
+    <link rel="stylesheet" href="../dome.base/ui/spinner.css" />
+  </head>
+  <body>
+    <main class="" aria-label="Gallery">
+      <ol class="carousel__viewport">
+        <li id="home" tabindex="0" class="carousel__slide hidden">
+          <section class="carousel__snapper">
+            <main id="homeView">
+              <!-- Dashboard Header (Component), shows user full name, dynamic to user data -->
+              <header class="sticky top-0 bg-white h-28 z-20">
+                <div class="flex justify-start items-center pl-3.5 pt-14">
+                  <img
+                    role="button"
+                    class="btn-0 rounded-full"
+                    style="width: 3rem"
+                    src="https://i.ibb.co/TMVKvGWp/user.png"
+                    alt="usr"
+                  />
+                  <h1 id="hd_profile" class="_font text-xl pl-2">
+                    Default User
+                  </h1>
+                </div>
+              </header>
+
+              <!-- Dashboard Router (Fragment) -->
+              <section>
+                <iframe src="./dashboard/route.html" class="w-screen"></iframe>
+              </section>
+
+              <!-- BottomNavigationBar (Component), navigator, static function -->
+              <section class="absolute bottom-0 w-full">
+                <nav class="border-t bg-white h-20 w-full">
+                  <ul class="flex justify-around pt-2">
+                    <li class="pt-1 pl-0.5">
+                      <a href="./dashboard.html">
+                        <img
+                          class="h-6"
+                          src="../dome.sources/dashboard-active.svg"
+                        />
+                      </a>
+                    </li>
+
+                    <li class="pt-1 pl-1.5">
+                      <a href="./transactions.html">
+                        <img
+                          class="inbox-icon"
+                          src="../dome.sources/inbox.svg"
+                        />
+                      </a>
+                    </li>
+
+                    <li class="pt-0.5 pl-0.5">
+                      <a href="./profile.html">
+                        <img
+                          class="profile-icon"
+                          src="../dome.sources/profile.svg"
+                        />
+                      </a>
+                    </li>
+                  </ul>
+                </nav>
+              </section>
+            </main>
+          </section>
+        </li>
+
+        <li id="success" tabindex="0" class="carousel__slide">
+          <section class="carousel__snapper">
+            <div class="h-screen flex justify-center items-center">
+              <!-- Center Element -->
+              <div class="flex justify-center items-center mb-28">
+                <div class="flex justify-center items-center">
+                  <img class="h-56" src="../dome.sources/success.svg" />
+                </div>
+
+                <div class="absolute mt-72">
+                  <p class="_font text-black text-xl font-medium">
+                    Transaction Successful
+                  </p>
+                </div>
+              </div>
+
+              <!-- Bottom Element -->
+              <div class="absolute bottom-11 w-full">
+                <div class="pl-7 pr-7">
+                  <a href="#receipt">
+                    <button
+                      id="verify_success"
+                      class="_font btn-0 main-btn rounded-full h-14 w-full"
+                    >
+                      View Receipt
+                    </button>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </section>
+        </li>
+
+        <li id="receipt" tabindex="0" class="carousel__slide">
+          <section class="carousel__snapper bg-theme">
+            <div class="h-screen _font">
+              <!-- Center Element -->
+              <div class="flex items-center h-full justify-center">
+                <div class="tx-box p-4 bg-white w-full ml-5 mr-5 mb-20">
+                  <h1 class="text-lg font-medium text-center mb-3 pt-1">
+                    Transaction Details
+                  </h1>
+                  <hr
+                    class="tx-box-line"
+                    style="
+                      outline-width: 0.1px;
+                      background-color: rgb(72, 72, 72);
+                    "
+                  />
+
+                  <div class="pt-6">
+                    <h6 class="font-semibold text-sm" id="transaction-id">
+                      Transaction ID
+                    </h6>
+                    <p id="txid" class="font-medium text-sm pt-0.5">
+                      #638ac2b01ea9dc9676d5d1f0
+                    </p>
+
+                    <h6
+                      class="font-semibold text-sm pt-4"
+                      id="transaction-date"
+                    >
+                      Transaction Date
+                    </h6>
+                    <p id="date" class="font-medium text-sm pt-0.5">
+                      Wed Apr 19 2023 at 1:46:53
+                    </p>
+
+                    <h6
+                      class="font-semibold text-sm pt-4"
+                      id="transaction-status"
+                    >
+                      Transaction Status
+                    </h6>
+                    <p id="status" class="font-medium text-sm pt-0.5">
+                      Success
+                    </p>
+
+                    <h6 class="font-semibold text-sm pt-4" id="to">To</h6>
+                    <p id="cafe" class="font-medium text-base pt-0.5">Cresta</p>
+
+                    <div class="pt-4">
+                      <h6 class="font-semibold text-sm pt-0.5" id="amount">
+                        Amount
+                      </h6>
+                      <p id="cost" class="tx-cost font-bold text-xl hyper-text">
+                        &#8358;2500
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Bottom Element -->
+              <div class="absolute bottom-8 w-full">
+                <div class="pl-5 pr-5">
+                  <button
+                    id="vbtn"
+                    class="_font btn-0 hyper-text bg-white text-lg font-medium rounded-full h-14 w-full p-4"
+                  >
+                    Validate
+                  </button>
+                </div>
+              </div>
+            </div>
+          </section>
+        </li>
+      </ol>
+    </main>
+
+    <!-- iOS Modal -->
+    <div
+      class="hidden fixed inset-0 flex items-center justify-center bg-black bg-opacity-50"
+      id="cupertinoModalMain"
+    >
+      <div class="pt-3.5">
+        <div id="cupertinoDialog" class="WK-iOSAlert rounded-xl">
+          <div>
+            <h1 id="cupertinoTitle" class="WK-iOSAlertTitle text-center">
+              Label
+            </h1>
+            <p id="cupertinoContent" class="WK-iOSAlertDescription text-center">
+              Description
+            </p>
+            <div class="WK-iOSAlertActionBar">
+              <button
+                id="cupertinoModalBtn"
+                class="WK-iOSAlertAction border-t rounded-b-lg"
+              >
+                Ok
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Android Modal -->
+    <div
+      class="hidden fixed inset-0 flex items-center justify-center bg-black bg-opacity-50"
+      id="materialModalMain"
+    >
+      <div class="pt-1">
+        <div id="materialDialog" class="WK-MaterialAlert rounded-xs _feedfont">
+          <div class="pt-1">
+            <!-- <img class="" src="./dbs_content/alertbox.png"> -->
+            <h1 id="materialTitle" class="WK-MaterialAlertTitle font-medium">
+              Label
+            </h1>
+            <p id="materialContent" class="WK-MaterialAlertDescription">
+              Description
+            </p>
+            <div class="WK-MaterialAlertActionBar flex flex-row-reverse">
+              <button
+                id="materialModalBtn"
+                class="WK-MaterialAlertAction font-medium mr-4 mt-8 py-1.5 px-4"
+              >
+                OK
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="../dome.scripts/dome-receipt.js"></script>
+    <script src="../dome.scripts/dome-profile.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mobile-detect/1.4.5/mobile-detect.min.js"></script>
+  </body>
+</html>

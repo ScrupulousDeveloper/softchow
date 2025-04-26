@@ -1,0 +1,169 @@
+@font-face {
+  font-family: "SF-Pro-Text-Regular";
+  src: url(../fonts/SF-Pro-Text-Regular.woff) format("woff");
+}
+@font-face {
+  font-family: "SF-Pro-Text-Medium";
+  src: url(../fonts/SF-Pro-Text-Medium.woff) format("woff");
+}
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: scale(0.95);
+  }
+  to {
+      opacity: 1;
+      transform: scale(1);
+  }
+}
+
+@keyframes fadeInBackground {
+  from {
+      background-color: rgba(0, 0, 0, 0);
+  }
+  to {
+      background-color: rgba(0, 0, 0, 0.5);
+  }
+}
+
+@keyframes fadeOut {
+  from {
+      opacity: 1;
+      transform: scale(1);
+  }
+  to {
+      opacity: 0;
+      transform: scale(0.95);
+  }
+}
+
+@keyframes fadeOutBackground {
+  from {
+      background-color: rgba(0, 0, 0, 0.5);
+  }
+  to {
+      background-color: rgba(0, 0, 0, 0);
+  }
+}
+
+.animate-fadeInBackground {
+  animation: fadeInBackground 0.3s ease-out;
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.3s ease-out;
+}
+
+.animate-fadeOut {
+  animation: fadeOut 0.3s ease-out;
+}
+
+.animate-fadeOutBackground {
+  animation: fadeOutBackground 0.3s ease-out;
+}
+
+.WK-iOSAlertTitle {
+  font-family: "SF-Pro-Text-Medium";
+  padding-top: 1.13rem;
+  letter-spacing: -0.031rem;
+  color: #000000;
+}
+
+.WK-MaterialAlertTitle {
+  padding-top: 1.0rem;
+  padding-left: 1.4rem;
+  /* letter-spacing: -0.031rem; */
+  color: #000000;
+  font-size: 20px;
+}
+
+.WK-iOSAlert {
+  height: 7.87rem;
+  width: 16.9rem;
+  background-color: #f9f9f9;
+}
+
+.WK-MaterialAlert {
+  height: 9.87rem;
+  width: 20.2rem;
+  background-color: #f9f9f9;
+}
+
+.WK-iOSAlertDescription {
+  font-family: "SF-Pro-Text-Regular";
+  font-size: 0.8rem;
+  padding-top: 0.04rem;
+  color: #000000;
+}
+
+.WK-MaterialAlertDescription {
+  padding-left: 1.4rem;
+  padding-top: 0.04rem;
+  color: #000000;
+}
+
+.WK-iOSAlertActionBar {
+  padding-top: 1.19rem;
+}
+
+.WK-iOSAlertAction {
+  width: 16.87rem;
+  height: 2.7rem;
+  color: rgba(76, 136, 246, 0.9843137255);
+  font-size: 1.1rem;
+  letter-spacing: -1px;
+  padding-right: 0.0625rem;
+  font-family: "SF-Pro-Text-Regular";
+}
+
+.WK-iOSAlertAction:active {
+  background-color: #d1cfcf;
+}
+
+.WK-MaterialAlertAction:active {
+  background-color: #d1cfcf;
+  animation: fadeIn 0.1s ease-out;
+}
+
+@media (prefers-color-scheme: dark) {
+  .WK-iOSAlert {
+    background-color: #404040;
+  }
+  .WK-iOSAlertTitle, .WK-iOSAlertDescription {
+    color: #ffffff;
+  }
+  .WK-iOSAlertAction {
+    color: #5992fa;
+  }
+  .WK-iOSAlertAction:active {
+    background-color: #4e4e4e;
+  }
+
+  /* Material Modal */
+  .WK-MaterialAlert {
+    background-color: #323232;
+  }
+  
+  .WK-MaterialAlertTitle {
+    color: #ffffff;
+  }
+  
+  .WK-MaterialAlertDescription {
+    color: #ffffff;
+  }
+  
+  .WK-MaterialAlertAction {
+    color: rgba(76, 136, 246, 0.9843137255);
+  }
+
+  .WK-MaterialAlertAction:active {
+    background-color: #4e4e4e;
+    animation: fadeIn 0.1s ease-out;
+  }
+}
+@media (prefers-color-scheme: light) {
+  .WK-iOSAlertAction {
+    border-color: rgb(151, 151, 151);
+  }
+}/*# sourceMappingURL=main.css.map */

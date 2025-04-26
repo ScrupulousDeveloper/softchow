@@ -1,0 +1,185 @@
+@import "https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap";
+@import "https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap";
+@font-face {
+  font-family: "SF-Pro-Text-Regular";
+  src: url(/assets/fonts/sf_pro/SF-Pro-Text-Regular.woff) format("woff");
+}
+@font-face {
+  font-family: "SF-Pro-Text-Medium";
+  src: url(/assets/fonts/sf_pro/SF-Pro-Text-Medium.woff) format("woff");
+}
+.btn-0:active {
+  opacity: 0.4;
+}
+.main-btn {
+  background-color: #2e348f;
+  color: #fefefe;
+}
+.alt-btn {
+  background-color: #fff;
+  color: #2e348f;
+}
+.trans-btn {
+  border-color: #2e348f;
+  color: #2e348f;
+}
+.exp-btn {
+  border-color: #e83626;
+  color: #e83626;
+}
+.bg-splash {
+  background-image: url(https://raw.githubusercontent.com/scrupulousdeveloper/softchow/main/dome.sources/splash.svg);
+}
+.bal-card {
+  background-image: url(https://i.ibb.co/bMygH0x2/feeding.png);
+}
+.bg-theme {
+  background-color: #2f348e;
+}
+.modeller {
+  background-image: url(/temp/AmountPrompt.png);
+}
+.modeller-spl {
+  background-image: url(/temp/2.png);
+}
+.modeller-qr {
+  background-image: url(/temp/QRScanPrompt.png);
+}
+.modeller-pin {
+  background-image: url(/temp/PINPrompt.png);
+}
+.modeller-pin-np {
+  background-image: url(/temp/PINPromptNoKeypad.png);
+}
+.modeller-sc {
+  background-image: url(/temp/SuccessView.png);
+}
+.modeller-r {
+  background-image: url(/temp/ValidatedAlertDialog-2.png);
+}
+.modeller-tx {
+  background-image: url(/temp/TransactionFragment2.jpeg);
+}
+.modeller-usr {
+  background-image: url(/temp/ProfileView.png);
+}
+.modeller-rp {
+  background-image: url(/temp/ResetPINPrompt.png);
+}
+.modeller-used {
+  background-image: url(/temp/UsedReceiptView.png);
+}
+input:focus {
+  outline: none;
+}
+.modeller-h {
+  background-image: url(/temp/DashboardFragment.png);
+}
+iframe {
+  height: 85vh;
+}
+.modeller-login {
+  background-image: url(/temp/NotUserAlertDialog.png);
+}
+._font {
+  font-family: "Montserrat", sans-serif;
+}
+._feedfont {
+  font-family: "Roboto", sans-serif;
+}
+._sys_font {
+  font-family: "SF-Pro-Text-Regular";
+}
+._sys_font_bold {
+  font-family: "SF-Pro-Text-Medium";
+}
+.spl-text-1 {
+  color: #2e348f;
+}
+.spl-text-2 {
+  color: #d11878;
+}
+.spl-text-3 {
+  color: #4a4b4d;
+  letter-spacing: 0.2em;
+}
+.error-text {
+  color: #f7402f;
+}
+.stale-tx {
+  color: #e83626;
+}
+.hyper-text {
+  color: #2e348f;
+}
+.text-excess {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.std-input {
+  background-color: #f2f2f2;
+}
+.std-input::-moz-placeholder {
+  color: #4a4b4d;
+}
+.std-input::placeholder {
+  color: #4a4b4d;
+}
+.pin-input {
+  -webkit-text-security: disc;
+}
+.inbox-icon {
+  height: 1.6rem;
+}
+.profile-icon {
+  height: 1.8rem;
+}
+.txv-cafe-icon {
+  height: 3.8rem;
+  width: 3.8rem;
+}
+.pfl-add-icon {
+  border-width: 3px;
+  background-color: #2f348e;
+}
+.qrs-close {
+  background-color: #4a4b4c;
+}
+.qrs-close:hover {
+  filter: brightness(60%);
+}
+.dot {
+  display: inline-block;
+  background-color: #2f348e;
+}
+.loader .dot:nth-last-child(1) {
+  animation: waves 0.6s 0.1s ease-in infinite;
+}
+.loader .dot:nth-last-child(2) {
+  animation: waves 0.6s 0.2s ease-in infinite;
+}
+.loader .dot:nth-last-child(3) {
+  animation: waves 0.6s 0.3s ease-in infinite;
+}
+@keyframes waves {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    transform: translate3d(0, 15px, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+.tx-box {
+  height: 28.125rem;
+  border-radius: 0.6rem;
+}
+* {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+} /*# sourceMappingURL=designer.css.map */
