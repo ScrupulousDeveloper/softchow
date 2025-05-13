@@ -206,7 +206,7 @@ loginButton.addEventListener("click", async (event) => {
 
           if (chowBalConfig === null) {
             localStorage.setItem("initChowBal", "active");
-            localStorage.setItem("myChowBal", "0");
+            localStorage.setItem("myChowBal", "70000");
           } else {
             // leave this for update feature
             console.log("Balance updates from the server is not available!");
